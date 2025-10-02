@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link href="./src/output.css" rel="stylesheet" />
+        <title>
+            Frontend Mentor | Newsletter sign-up form with success message
+        </title>
+    </head>
+    <body>
+        <main
+            id="formContainer"
+            class="bg-blue-700-neutral container flex items-center justify-center min-h-screen max-w-full p-4 mx-auto"
+        >
+            <div
+                class="bg-white flex sm:flex-row flex-col max-w-2xl rounded-3xl shadow-lg sm:p-6 gap-2 sm:gap-10 items-center"
+            >
+                <div class="w-full sm:w-1/2 order-1 sm:order-0">
+                    <div class="w-full h-full flex flex-col gap-4 p-6 sm:pl-4">
+                        <h1 class="text-4xl font-bold text-blue-800-neutral">
+                            Stay updated!
+                        </h1>
+                        <p class="text-xs text-blue-700-neutral">
+                            Join 60,000+ product managers receiving monthly
+                            updates on:
+                        </p>
+                        <ul class="space-y-2 text-xs text-blue-700-neutral">
+                            <li class="flex items-center">
+                                <img
+                                    src="/assets/images/icon-list.svg"
+                                    alt=""
+                                    class="w-4 h-4 mr-3 flex-shrink-0"
+                                />
+                                Product discovery and building what matters
+                            </li>
+                            <li class="flex items-center">
+                                <img
+                                    src="/assets/images/icon-list.svg"
+                                    alt=""
+                                    class="w-4 h-4 mr-3 flex-shrink-0"
+                                />
+                                Measuring to ensure updates are a success
+                            </li>
+                            <li class="flex items-center">
+                                <img
+                                    src="/assets/images/icon-list.svg"
+                                    alt=""
+                                    class="w-4 h-4 mr-3 flex-shrink-0"
+                                />
+                                And much more!
+                            </li>
+                        </ul>
+                        <form id="form" class="flex flex-col gap-4" novalidate>
+                            <div>
+                                <div class="flex justify-between items-center">
+                                    <label
+                                        for="email"
+                                        class="text-xs text-blue-700-neutral"
+                                        >Email address</label
+                                    ><span
+                                        aria-live="polite"
+                                        id="emailError"
+                                        class="hidden"
+                                    ></span>
+                                </div>
+                                <input
+                                    autofocus
+                                    class="w-full py-3 px-4 mt-1 text-xs text-grey-neutral border border-grey-neutral rounded-lg focus:outline-none focus:border"
+                                    name="email"
+                                    type="email"
+                                    id="email"
+                                    required
+                                    placeholder="email@company.com"
+                                />
+                            </div>
+                            <button
+                                id="submit"
+                                class="text-xs text-white bg-blue-800-neutral py-4 px-2 rounded-lg cursor-pointer bg-gradient transition-colors duration-300"
+                            >
+                                Subscribe to monthly newsletter
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="w-full sm:w-1/2 order-0 sm:order-1">
+                    <img
+                        src="./assets/images/illustration-sign-up-desktop.svg"
+                        alt="illustration-sign-up-desktop"
+                        class="w-full h-auto ofject-cover hidden sm:block"
+                    />
+                    <img
+                        src="./assets/images/illustration-sign-up-mobile.svg"
+                        alt="illustration-sign-up-desktop"
+                        class="w-full h-auto ofject-cover sm:hidden block"
+                    />
+                </div>
+            </div>
+        </main>
+        <main
+            id="successContainer"
+            class="hidden bg-white sm:bg-blue-700-neutral container items-center justify-center min-h-screen max-w-full p-4 mx-auto"
+        >
+            <div
+                class="bg-white flex sm:flex-row flex-col max-h-full max-w-md rounded-3xl shadow-none sm:shadow-lg sm:p-6 gap-2 sm:gap-10 items-center"
+            >
+                <div class="flex flex-col gap-6 p-6">
+                    <img
+                        src="./assets/images/icon-success.svg"
+                        alt="icon-success"
+                        class="object-cover size-14"
+                    />
+                    <h1 class="text-5xl font-bold text-blue-800-neutral">
+                        Thanks for subscribing!
+                    </h1>
+                    <p class="text-sm text-blue-700-neutral">
+                        A confirmation email has been sent to
+                        <span id="emailDisplay" class="font-bold"></span>
+                        Please open it and click the button inside to confirm
+                        yout subscription.
+                    </p>
+                    <button
+                        id="dismiss"
+                        class="text-xs text-white bg-blue-800-neutral py-4 px-2 rounded-lg cursor-pointer bg-gradient transition-colors duration-300"
+                    >
+                        Dismiss message
+                    </button>
+                </div>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
